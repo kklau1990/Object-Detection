@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="V1.2 - Base images and annotated files for yolov3 model">
+    <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Azure Repositories/PatientCareSystem" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -80,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612072888970</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="V1.3 - Added augmented images">
+      <created>1612073513045</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612073513045</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -90,21 +98,34 @@
     <MESSAGE value="V1.0 - Base program for custom product SKU detection" />
     <MESSAGE value="V1.1 - Added base weights to detect custom product SKU" />
     <MESSAGE value="V1.2 - Base images and annotated files for yolov3 model" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.2 - Base images and annotated files for yolov3 model" />
+    <MESSAGE value="V1.3 - Added augmented images" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.3 - Added augmented images" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="423" y="0" width="830" height="824" key="CommitChangelistDialog2" timestamp="1612073181194">
+    <state x="423" y="0" width="830" height="824" key="CommitChangelistDialog2" timestamp="1612073501158">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="423" y="0" width="830" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612073181194" />
+    <state x="423" y="0" width="830" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612073501158" />
+    <state x="217" y="65" key="DiffContextDialog" timestamp="1612073217918">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="217" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1612073217918" />
     <state x="575" y="49" key="RollbackChangesDialog" timestamp="1612071200453">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="49" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612071200453" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1612074313408">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612074313408" />
     <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1612071997674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612071997674" />
+    <state x="620" y="64" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1612073213498">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="620" y="64" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1612073213498" />
     <state x="577" y="255" key="git4idea.rebase.GitRebaseDialog" timestamp="1612071372791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -284,6 +284,6 @@ od = Main()  # initialization
 
 # od.img_filter(filter_mode=[0, 1, 2], batch=True)
 
-# od.yolo_predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\HUP SENG CREAM CRACKERS 428G'
-#                    '\\test\\TT53.jpg')
+od.yolo_predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\HUP SENG CREAM CRACKERS 428G'
+                   '\\test\\TT53.jpg')
 
