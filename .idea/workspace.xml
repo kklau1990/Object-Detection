@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="" />
+    <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="V1.0 - Base program for custom product SKU detection" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,33 +57,43 @@
       <option name="project" value="LOCAL" />
       <updated>1612071232866</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="V1.0 - Base program for custom product SKU detection">
+      <created>1612071932162</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612071932162</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="V1.0 - Base program for custom product SKU detection" />
     <option name="LAST_COMMIT_MESSAGE" value="V1.0 - Base program for custom product SKU detection" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="423" y="0" key="CommitChangelistDialog2" timestamp="1612071230511">
+    <state x="423" y="0" key="CommitChangelistDialog2" timestamp="1612072484428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="423" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612071230511" />
+    <state x="423" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612072484428" />
     <state x="575" y="49" key="RollbackChangesDialog" timestamp="1612071200453">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="49" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612071200453" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1612071272045">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1612071997674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612071272045" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612071997674" />
     <state x="577" y="255" key="git4idea.rebase.GitRebaseDialog" timestamp="1612071372791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="255" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1612071372791" />
-    <state x="548" y="308" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612071221535">
+    <state x="548" y="308" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612071988456">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="308" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612071221535" />
+    <state x="548" y="308" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612071988456" />
   </component>
 </project>
