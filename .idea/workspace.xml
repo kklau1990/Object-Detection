@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="V1.0 - Base program for custom product SKU detection" />
+    <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="V1.2 - Base images and annotated files for yolov3 model">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +66,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612071932162</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="V1.1 - Added base weights to detect custom product SKU">
+      <created>1612072531274</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612072531274</updated>
+    </task>
+    <task id="LOCAL-00005" summary="V1.2 - Base images and annotated files for yolov3 model">
+      <created>1612072888970</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612072888970</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -72,13 +88,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="V1.0 - Base program for custom product SKU detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.0 - Base program for custom product SKU detection" />
+    <MESSAGE value="V1.1 - Added base weights to detect custom product SKU" />
+    <MESSAGE value="V1.2 - Base images and annotated files for yolov3 model" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.2 - Base images and annotated files for yolov3 model" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="423" y="0" key="CommitChangelistDialog2" timestamp="1612072484428">
+    <state x="423" y="0" width="830" height="824" key="CommitChangelistDialog2" timestamp="1612073181194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="423" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612072484428" />
+    <state x="423" y="0" width="830" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612073181194" />
     <state x="575" y="49" key="RollbackChangesDialog" timestamp="1612071200453">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
