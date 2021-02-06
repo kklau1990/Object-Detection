@@ -78,7 +78,7 @@ class Main:
             tmp_tiff = imageio.imread(f'{self.cwd}\\screenshots\\norm_feature_scale_A364.tiff')
             print(f'norm_feature_scale_A364.tiff array : {tmp_tiff}')
             # end
-        else:
+        else:  # execute actual process to normalize all train and validate image data
             for folder in self.prod_sku_folders:
                 for tv in self.train_val:
                     for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}'):

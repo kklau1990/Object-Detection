@@ -5,6 +5,7 @@ from Utils import affine_transform as af, norm_stad_process as nsp, rename_files
 from Utils import image_filter_process as ifp, create_train_val as ctv
 import os
 import matplotlib.pyplot as plt
+import shutil
 
 df = pd.DataFrame(columns=['Filepath', 'Folder', 'Filename', 'Dimension'])
 
@@ -135,6 +136,20 @@ class Main:
                     # save resize image
                     cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', resized_img)
     # end
+
+    def copy(self):
+        finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
+        for folder in self.prod_sku_folders:
+            # source folder
+            unfiltered_path = f'{finalized_prod_sku_folder}\\{folder}\\unfiltered'
+            ttv_folders = next(os.walk(f'{unfiltered_path}'))[1]
+            for ttv_folder in ttv_folders:
+                # copy a set of unfiltered test, train val images to filter folders
+                filter_folders = next(os.walk(f'{finalized_prod_sku_folder}\\{folder}'))[1]
+                filter_folders.remove('unfiltered')
+                for filter_folder in filter_folders:
+                    shutil.copytree(f'{unfiltered_path}\\{ttv_folder}',
+                                    f'{finalized_prod_sku_folder}\\{folder}\\{filter_folder}\\{ttv_folder}')
 
     # smoothing images
     def img_filter(self, **kwargs):
@@ -270,9 +285,11 @@ od = Main()  # initialization
 nsp_obj = nsp.Main()
 # nsp_obj.standardization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
 # nsp_obj.normalization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
-nsp_obj.normalization(observation_test=False)
+# nsp_obj.normalization(observation_test=False)
 
-# od.img_filter(filter_mode=[0, 1, 2], batch=True)
+# od.copy()
+
+od.img_filter(filter_mode=[0, 1, 2], batch=True)
 
 # od.yolo_predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\HUP SENG CREAM CRACKERS 428G'
 #                    '\\test\\TT53.jpg')
