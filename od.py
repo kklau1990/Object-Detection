@@ -1,16 +1,13 @@
 import cv2
 import numpy as np
 import pandas as pd
-import rename_files as nf
-import create_train_val as ctv
-import affine_transform as af
-import image_filter_process as ifp
-import norm_stad_process as nsp
+from Utils import affine_transform as af, norm_stad_process as nsp, rename_files as nf
+from Utils import image_filter_process as ifp, create_train_val as ctv
 import os
 import matplotlib.pyplot as plt
 
 df = pd.DataFrame(columns=['Filepath', 'Folder', 'Filename', 'Dimension'])
-# constant width, height for resized image
+
 
 class Main:
     def __init__(self):
@@ -51,10 +48,10 @@ class Main:
             finalized_image_path = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
             for folder in self.prod_sku_folders:
                 for tv in train_val_test:
-                    for file in os.listdir(f'{finalized_image_path}\\{folder}\\{tv}'):
-                        im = cv2.imread(f'{finalized_image_path}\\{folder}\\{tv}\\{file}')
-                        df = df.append({'Filepath': f'{finalized_image_path}\\{folder}\\{tv}\\{file}', 'Folder':
-                                        f'{folder}', 'Filename': f'{file}', 'Dimension': str(im.shape)},
+                    for file in os.listdir(f'{finalized_image_path}\\{folder}\\unfiltered\\{tv}'):
+                        im = cv2.imread(f'{finalized_image_path}\\{folder}\\unfiltered\\{tv}\\{file}')
+                        df = df.append({'Filepath': f'{finalized_image_path}\\{folder}\\unfiltered\\{tv}\\{file}',
+                                        'Folder': f'{folder}', 'Filename': f'{file}', 'Dimension': str(im.shape)},
                                        ignore_index=True)
     # end
 
@@ -133,20 +130,26 @@ class Main:
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
         for folder in self.prod_sku_folders:
             for tv in train_val:
-                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\{tv}'):
-                    img = cv2.imread(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}')
+                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}'):
+                    img = cv2.imread(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
                     resized_img = cv2.resize(img, (self.resized_height, self.resize_width))
                     # delete original image
-                    os.remove(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}')
+                    os.remove(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
                     # save resize image
-                    cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}', resized_img)
+                    cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', resized_img)
+    # end
+
+    # data normalization process
+    def normalization(self):
+        nsp_obj = nsp.Main()
+        nsp_obj.normalization()
     # end
 
     # smoothing images
     def img_filter(self, **kwargs):
         ifp_obj = ifp.Main()
 
-        filter_mode = kwargs.pop('filter_mode', [1])  # if no filter is selected, default as 1 (mean filter)
+        filter_mode = kwargs.pop('filter_mode', [0])  # if no filter is selected, default as 1 (mean filter)
         batch = kwargs.pop('batch', False)
         test_input = kwargs.pop('test_input', '')
 
@@ -158,12 +161,6 @@ class Main:
 
         for i in filter_mode:
             ifp_obj.initiate(i, batch, test_input)
-    # end
-
-    # data normalization process
-    def normalization(self):
-        nsp_obj = nsp.Main()
-        nsp_obj.normalization()
     # end
 
     # test yolo model

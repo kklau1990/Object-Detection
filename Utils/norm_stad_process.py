@@ -22,15 +22,15 @@ class Main:
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
         for folder in self.prod_sku_folders:
             for tv in self.train_val:
-                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\{tv}'):
-                    img = plt.imread(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}')
+                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}'):
+                    img = plt.imread(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
                     img = np.asarray(img)
                     img = img.astype('float32')
                     img = self.std_formula(img)
                     # delete original image
-                    os.remove(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}')
+                    os.remove(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
                     # save resize image
-                    cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}', img)
+                    cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', img)
 
     def standardization_plot(self, folder, filename):
         img = plt.imread(f'{self.image_path}\\{self.finalized_prod_sku_folder}\\{folder}\\{filename}')
@@ -48,8 +48,8 @@ class Main:
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
         for folder in self.prod_sku_folders:
             for tv in self.train_val:
-                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\{tv}'):
-                    img = plt.imread(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}')
+                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}'):
+                    img = plt.imread(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
                     img = np.asarray(img)
                     img = img.astype('float32')
 
@@ -60,9 +60,9 @@ class Main:
                     final_img2 = self.feature_scaling(final_img2)
 
                     # delete original image
-                    os.remove(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}')
+                    os.remove(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
                     # save resize image
-                    cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}', final_img2)
+                    cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', final_img2)
 
     def normalization_plot(self, folder, filename):
         img = plt.imread(f'{self.image_path}\\{self.finalized_prod_sku_folder}\\{folder}\\{filename}')
@@ -104,8 +104,8 @@ class Main:
 
 
 # unit test cases
-nsp_obj = Main()
+# nsp_obj = Main()
 # to visualize differences between original, standardized and normalized image
-# nsp_obj.standardization_plot('HUGGIES ULTRA SUPER JUMBO M\\train', 'A332.jpg')
-# nsp_obj.normalization_plot('HUGGIES ULTRA SUPER JUMBO M\\train', 'A332.jpg')
+# nsp_obj.standardization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A332.jpg')
+# nsp_obj.normalization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A332.jpg')
 # end

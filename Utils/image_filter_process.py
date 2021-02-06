@@ -49,15 +49,18 @@ class Main:
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
         for folder in self.prod_sku_folders:
             for tv in train_val:
-                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\{tv}'):
-                    img = cv2.imread(f'{finalized_prod_sku_folder}\\{folder}\\{tv}\\{file}')
-                    # plt.figure()
-                    # plt.imshow(img[..., ::-1])
-                    # plt.show()
+                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}'):
+                    img = cv2.imread(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
+                    plt.figure()
+                    plt.imshow(img[..., ::-1])
+                    plt.show()
                     img = eval(filter, {'img': img})
-                    # plt.figure()
-                    # plt.imshow(img[..., ::-1])
-                    # plt.show()
+                    plt.figure()
+                    plt.imshow(img[..., ::-1])
+                    plt.show()
+                    return
+                return
+            return
 
     def filter_test_images(self, filter, test_input):
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
@@ -72,7 +75,7 @@ class Main:
 
 # unit test cases
 # m = Main()
-# m.initiate(0, False, 'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH\\train\\A779.jpg')
-# m.initiate(1, False, 'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH\\train\\A779.jpg')
-# m.initiate(2, False, 'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH\\train\\A779.jpg')
+# m.initiate(0, False, 'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH\\unfiltered\\train\\A779.jpg')
+# m.initiate(1, False, 'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH\\unfiltered\\train\\A779.jpg')
+# m.initiate(2, False, 'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH\\unfiltered\\train\\A779.jpg')
 # end
