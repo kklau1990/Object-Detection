@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 import os
+import imageio
+from PIL import Image
 
 
 class Main:
@@ -29,7 +31,7 @@ class Main:
                     img = self.std_formula(img)
                     # delete original image
                     os.remove(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
-                    # save resize image
+                    # save new image
                     cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', img)
 
     def standardization_plot(self, folder, filename):
@@ -43,26 +45,55 @@ class Main:
         self.plot(img)
     # end
 
-    # normalize value between 0 and 1
-    def normalization(self):
+    # normalize process to smoothen image
+    def normalization(self, observation_test=True):
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
-        for folder in self.prod_sku_folders:
-            for tv in self.train_val:
-                for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}'):
-                    img = plt.imread(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
-                    img = np.asarray(img)
-                    img = img.astype('float32')
+        if observation_test:  # generate 2 sample .tiff images to compare the output
+            file = f'{finalized_prod_sku_folder}\\HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train\\A364.jpg'
+            print(f'Finalized A364.png file size is {os.stat(f"{file}").st_size / 1024} KB')
 
-                    norm_img = np.zeros((self.resized_height, self.resized_height))
-                    final_img = cv2.normalize(img, norm_img, 0, 255, cv2.NORM_MINMAX)
-                    final_img2 = np.asarray(final_img)
-                    final_img2 = final_img2.astype('float32')
-                    final_img2 = self.feature_scaling(final_img2)
+            img = Image.open(file)
+            img2 = np.asarray(img)
+            img2 = img2.astype('float32')
+            norm_img = np.zeros((self.resized_height, self.resized_height))
+            final_img = cv2.normalize(img2, norm_img, 0, 255, cv2.NORM_MINMAX)
+            img = Image.fromarray(final_img.astype(np.uint8))
 
-                    # delete original image
-                    os.remove(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
-                    # save resize image
-                    cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', final_img2)
+            # png, jpg file cannot save feature scaled array
+            img.save(f'{self.cwd}\\screenshots\\norm_A364.png', optimize=True)
+            print(f'norm_A364.png file size is {os.stat(f"{self.cwd}/screenshots/norm_A364.png").st_size / 1024} KB')
+
+            img.save(f'{self.cwd}\\screenshots\\norm_A364.jpg', optimize=True)
+            print(f'norm_A364.jpg file size is {os.stat(f"{self.cwd}/screenshots/norm_A364.jpg").st_size / 1024} KB')
+
+            final_img2 = np.asarray(final_img)
+            final_img2 = final_img2.astype('float32')
+            final_img2 = self.feature_scaling(final_img2)
+
+            # imageio can save floating point array but losing contrast with extremely big file size
+            imageio.imwrite(f'{self.cwd}\\screenshots\\norm_feature_scale_A364.tiff', final_img2)
+            print(f'norm_feature_scale_A364.tiff file size is '
+                  f'{os.stat(f"{self.cwd}/screenshots/norm_feature_scale_A364.tiff").st_size / 1024} KB')
+
+            tmp_tiff = imageio.imread(f'{self.cwd}\\screenshots\\norm_feature_scale_A364.tiff')
+            print(f'norm_feature_scale_A364.tiff array : {tmp_tiff}')
+            # end
+        else:
+            for folder in self.prod_sku_folders:
+                for tv in self.train_val:
+                    for file in os.listdir(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}'):
+                        img = Image.open(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
+                        img2 = np.asarray(img)
+                        img2 = img2.astype('float32')
+
+                        norm_img = np.zeros((self.resized_height, self.resized_height))
+                        final_img = cv2.normalize(img2, norm_img, 0, 255, cv2.NORM_MINMAX)
+                        img = Image.fromarray(final_img.astype(np.uint8))
+
+                        # delete original image
+                        os.remove(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
+                        # save new image
+                        img.save(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', optimize=True)
 
     def normalization_plot(self, folder, filename):
         img = plt.imread(f'{self.image_path}\\{self.finalized_prod_sku_folder}\\{folder}\\{filename}')
@@ -83,6 +114,7 @@ class Main:
         final_img3 = np.asarray(final_img)
         final_img3 = final_img3.astype('float32')
         final_img3 = self.feature_scaling(final_img3)
+        print(final_img3)
         self.plot(final_img3)
     # end
 
@@ -104,8 +136,9 @@ class Main:
 
 
 # unit test cases
-# nsp_obj = Main()
+nsp_obj = Main()
 # to visualize differences between original, standardized and normalized image
-# nsp_obj.standardization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A332.jpg')
-# nsp_obj.normalization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A332.jpg')
+# nsp_obj.standardization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
+# nsp_obj.normalization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
+# nsp_obj.normalization()
 # end

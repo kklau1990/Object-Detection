@@ -58,9 +58,6 @@ class Main:
                     plt.figure()
                     plt.imshow(img[..., ::-1])
                     plt.show()
-                    return
-                return
-            return
 
     def filter_test_images(self, filter, test_input):
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'

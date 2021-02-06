@@ -79,30 +79,27 @@ class Main:
         for folder in self.prod_sku_folders:
             df_filtered = df[df['Folder'] == folder]
 
-            # randomly sample 12 records
-            random_subset = df_filtered.sample(12)
-            # end
-            columns = 3
-            rows = 4
-            fig = plt.figure(figsize=(8, 8))
-            fig.canvas.set_window_title(folder)
+            # randomly sample 15 records
+            # max 15 only because huggies only have 15 records
+            random_subset = df_filtered.sample(15)
+            columns = 5
+            rows = 3
 
-            for i in range(1, columns * rows + 1):
-                img = cv2.imread(random_subset.iloc[i-1]['Filepath'])
-                fig.add_subplot(rows, columns, i)
-                plt.imshow(img[..., ::-1])  # RGB-> BGR
-                plt.title(random_subset.iloc[i - 1]['Filename'])
-            plt.show()
+            for j in range(1, 3):
+                fig = plt.figure(figsize=(8, 8))
+                fig.canvas.set_window_title(folder)
 
-            # to visualize pixel intensity
-            fig = plt.figure(figsize=(8, 8))
-            fig.canvas.set_window_title(folder)
-            for i in range(1, columns * rows + 1):
-                img = cv2.imread(random_subset.iloc[i-1]['Filepath'])
-                fig.add_subplot(rows, columns, i)
-                plt.hist(img.ravel(), 256, [0, 256])
-                plt.title(random_subset.iloc[i-1]['Filename'])
-            plt.show()
+                for i in range(1, columns * rows + 1):
+                    img = cv2.imread(random_subset.iloc[i-1]['Filepath'])
+                    fig.add_subplot(rows, columns, i)
+                    if j == 1:
+                        # to visualize image selected
+                        plt.imshow(img[..., ::-1])  # RGB-> BGR
+                    else:
+                        # to visualize pixel intensity
+                        plt.hist(img.ravel(), 256, [0, 256])
+                    plt.title(random_subset.iloc[i - 1]['Filename'])
+                plt.show()
     # end
 
     # data augmentation
@@ -137,12 +134,6 @@ class Main:
                     os.remove(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}')
                     # save resize image
                     cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', resized_img)
-    # end
-
-    # data normalization process
-    def normalization(self):
-        nsp_obj = nsp.Main()
-        nsp_obj.normalization()
     # end
 
     # smoothing images
@@ -265,19 +256,21 @@ od = Main()  # initialization
 # to visualize finalized data distribution
 # od.data_aggregation('Finalized Images')
 # od.data_dist_vis(df['Folder'], 'Total Count', 'Product SKU', 'Product SKU Finalized Data Distribution', 'barh', '1')
-# od.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Image Dimension Finalized Data Distribution',
+# od.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Finalized Image Dimension Data Distribution',
 #                  'bar', 0)
 
 # resize finalized images
 # od.img_resize()
 
-# to visualize differences between original, standardized and normalized image
-# od.standardization('HUGGIES ULTRA SUPER JUMBO M\\train', 'A332.jpg')
-# od.normalization('HUGGIES ULTRA SUPER JUMBO M\\train', 'A332.jpg')
-
 # od.data_aggregation('Finalized Images', True)
-# od.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Image Dimension Data Distribution Exclude Test '
-#                  'Data', 'bar', 0)
+# od.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Finalized Image Dimension Data Distribution '
+#                                                                     'Exclude Test Data', 'bar', 0)
+
+# to visualize differences between original, standardized and normalized image
+nsp_obj = nsp.Main()
+# nsp_obj.standardization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
+# nsp_obj.normalization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
+nsp_obj.normalization(observation_test=False)
 
 # od.img_filter(filter_mode=[0, 1, 2], batch=True)
 
