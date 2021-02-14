@@ -137,6 +137,7 @@ class Main:
                     cv2.imwrite(f'{finalized_prod_sku_folder}\\{folder}\\unfiltered\\{tv}\\{file}', resized_img)
     # end
 
+    # copy a set of unfiltered images to filter folders
     def copy(self):
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
         for folder in self.prod_sku_folders:
@@ -150,6 +151,7 @@ class Main:
                 for filter_folder in filter_folders:
                     shutil.copytree(f'{unfiltered_path}\\{ttv_folder}',
                                     f'{finalized_prod_sku_folder}\\{folder}\\{filter_folder}\\{ttv_folder}')
+    # end
 
     # smoothing images
     def img_filter(self, **kwargs):
@@ -195,7 +197,7 @@ class Main:
         height, width, channels = img.shape
 
         # USing blob function of opencv to preprocess image
-        blob = cv2.dnn.blobFromImage(img, 1 / 255.0, (416, 416),
+        blob = cv2.dnn.blobFromImage(img, 1 / 255.0, (384, 384),
                                      swapRB=True, crop=False)
         # Detecting objects
         net.setInput(blob)
@@ -205,6 +207,7 @@ class Main:
         class_ids = []
         confidences = []
         boxes = []
+        predicted_objects = {}
         for out in outs:
             for detection in out:
                 scores = detection[5:]
@@ -233,11 +236,18 @@ class Main:
                 x, y, w, h = boxes[i]
                 conf = '{:.2f}'.format(confidences[i])
                 label = str(classes[class_ids[i]])
+
+                if label not in predicted_objects:
+                    predicted_objects[label] = 1
+                else:
+                    predicted_objects[label] = predicted_objects[label] + 1
+
                 cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
                 cv2.putText(img, f'{label}: {str(conf)}', (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
                             # font size, color, thickness
                             0.5, (255, 0, 0), 2)
 
+        print(predicted_objects)
         plt.figure()
         plt.imshow(img[..., ::-1])  # RGB-> BGR
         plt.show()
@@ -289,8 +299,11 @@ nsp_obj = nsp.Main()
 
 # od.copy()
 
-od.img_filter(filter_mode=[0, 1, 2], batch=True)
+# initiate filter processes
+# od.img_filter(filter_mode=[0, 1, 2], batch=True)
 
-# od.yolo_predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\HUP SENG CREAM CRACKERS 428G'
-#                    '\\test\\TT53.jpg')
+# od.yolo_predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\NATURAL PURE OLIVE OIL 750 ML'
+#                    '\\test\\TT116.jpg')
+# od.yolo_predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\extra testing photos'
+#                        '\\20210207_133453.jpg')
 
