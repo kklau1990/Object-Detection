@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 from Utils import AffineTransform as af, NormStadProcess as nsp, RenameFiles as nf
 from Utils import ImageFilterProcess as ifp, CreateTrainVal as ctv
-from Utils import CreateTrainVal as tt
 import os
 import matplotlib.pyplot as plt
 import shutil
