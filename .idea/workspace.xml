@@ -7,7 +7,95 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/test/A216.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/test/A220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/test/A222.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/train/A263.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/train/A267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/train/A311.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A369.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A371.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A372.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A373.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A375.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A376.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/bilateral filtered/val/A377.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/test/A216.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/test/A220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/test/A222.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/train/A263.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/train/A267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/train/A311.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A369.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A371.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A372.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A373.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A375.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A376.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/mean filtered/val/A377.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/test/A216.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/test/A220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/test/A222.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/train/A263.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/train/A267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/train/A311.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A369.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A371.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A372.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A373.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A375.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A376.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/median filtered/val/A377.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/test/A216.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/test/A220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/test/A222.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/train/A263.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/train/A267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/train/A311.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A369.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A371.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A372.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A373.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A375.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A376.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HEAD &amp; SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL/unfiltered/val/A377.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HUP SENG CREAM CRACKERS 428G/bilateral filtered/test/A486.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HUP SENG CREAM CRACKERS 428G/bilateral filtered/train/A443.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HUP SENG CREAM CRACKERS 428G/mean filtered/test/A486.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HUP SENG CREAM CRACKERS 428G/mean filtered/train/A443.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HUP SENG CREAM CRACKERS 428G/median filtered/test/A486.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HUP SENG CREAM CRACKERS 428G/median filtered/train/A443.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HUP SENG CREAM CRACKERS 428G/unfiltered/test/A486.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/HUP SENG CREAM CRACKERS 428G/unfiltered/train/A443.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/bilateral filtered/test/A751.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/bilateral filtered/test/A751.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/bilateral filtered/val/V143.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/bilateral filtered/val/V143.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/mean filtered/test/A751.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/mean filtered/test/A751.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/mean filtered/val/V143.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/mean filtered/val/V143.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/median filtered/test/A751.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/median filtered/test/A751.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/median filtered/val/V143.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/median filtered/val/V143.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/unfiltered/test/A751.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/unfiltered/test/A751.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/unfiltered/val/V143.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Finalized Images/NATURAL PURE OLIVE OIL 750 ML/unfiltered/val/V143.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/affine_transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/AffineTransform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/create_train_val.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/CreateTrainVal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/image_filter_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/ImageFilterProcess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/norm_stad_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/NormStadProcess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/rename_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/RenameFiles.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/od.py" beforeDir="false" afterPath="$PROJECT_DIR$/od.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/finalized-product sku data distribution.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/finalized-product sku data distribution.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/finalized-product sku dimension distribution exclude test data.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/finalized-product sku dimension distribution exclude test data.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/finalized-product sku dimension distribution.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/finalized-product sku dimension distribution.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612621107912</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="V1.7 - Added filtered finalized images">
+      <created>1613293136550</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613293136550</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -226,17 +321,18 @@
     <MESSAGE value="V1.4 - Folder structure reformatting" />
     <MESSAGE value="V1.5 - Rebuild directory, analysis on image properties through normalization vs standardization and list of result screenshots" />
     <MESSAGE value="V1.6 - Corrected image batch filter processing, copy function to duplicate unfiltered folder to filtered folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.6 - Corrected image batch filter processing, copy function to duplicate unfiltered folder to filtered folders" />
+    <MESSAGE value="V1.7 - Added filtered finalized images" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.7 - Added filtered finalized images" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1612621562082">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612621562082" />
-    <state x="378" y="0" width="830" height="824" key="CommitChangelistDialog2" timestamp="1612621106688">
+    <state x="378" y="0" width="830" height="824" key="CommitChangelistDialog2" timestamp="1613293110032">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="378" y="0" width="830" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612621106688" />
+    <state x="378" y="0" width="830" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613293110032" />
     <state x="217" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1612577795374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -253,10 +349,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="536" y="12" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1612577626346" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1612621109814">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1613293204867">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612621109814" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613293204867" />
+    <state width="776" height="420" key="XDebugger.FullValuePopup" timestamp="1613540715163">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="776" height="420" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1613540715163" />
     <state x="620" y="64" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1612073213498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

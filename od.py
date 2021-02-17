@@ -1,27 +1,29 @@
 import cv2
 import numpy as np
 import pandas as pd
-from Utils import affine_transform as af, norm_stad_process as nsp, rename_files as nf
-from Utils import image_filter_process as ifp, create_train_val as ctv
+from Utils import AffineTransform as af, NormStadProcess as nsp, RenameFiles as nf
+from Utils import ImageFilterProcess as ifp, CreateTrainVal as ctv
+from Utils import CreateTrainVal as tt
 import os
 import matplotlib.pyplot as plt
 import shutil
+import ProductSKU as psku
+
 
 df = pd.DataFrame(columns=['Filepath', 'Folder', 'Filename', 'Dimension'])
 
 
 class Main:
     def __init__(self):
-        self.cwd = os.getcwd()
-        self.prod_sku_root_folder = 'Product SKU'
-        self.prod_sku_folders = ['HEAD & SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL', 'HUGGIES ULTRA SUPER JUMBO M',
-                                'HUP SENG CREAM CRACKERS 428G', 'KLEENEX ULTRA SOFT BATH ISSUE MEGA',
-                                'NATURAL PURE OLIVE OIL 750 ML', 'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH']
-        self.augmented_prod_sku_folder = 'Augmented Images'
-        self.finalized_prod_sku_folder = 'Finalized Images'
-        self.image_path = f'{self.cwd}\\{self.prod_sku_root_folder}'
-        self.resize_width = 800
-        self.resized_height = 800
+        psku_obj = psku.Main()
+        self.cwd = psku_obj.cwd
+        self.prod_sku_root_folder = psku_obj.prod_sku_root_folder
+        self.prod_sku_folders = psku_obj.prod_sku_folders
+        self.augmented_prod_sku_folder = psku_obj.augmented_prod_sku_folder
+        self.finalized_prod_sku_folder = psku_obj.finalized_prod_sku_folder
+        self.image_path = psku_obj.image_path
+        self.resize_width = psku_obj.resize_width
+        self.resized_height = psku_obj.resized_height
 
     # initiate data grouping into dataframe
     def data_aggregation(self, folder, excludetest=False):
@@ -258,9 +260,9 @@ nf_obj = nf
 # nf.main()  # executed once only
 # end
 
-# split files into train test val
-ctv_obj = ctv
-# ctv_obj.main() # executes only once/when required
+# split files into train test val for base images
+ctv_obj = ctv.Main()
+# ctv_obj.Build('Base')  # executes only once/when required
 # end
 
 od = Main()  # initialization
@@ -289,7 +291,7 @@ od = Main()  # initialization
 
 # od.data_aggregation('Finalized Images', True)
 # od.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Finalized Image Dimension Data Distribution '
-#                                                                     'Exclude Test Data', 'bar', 0)
+#                                                                      'Exclude Test Data', 'bar', 0)
 
 # to visualize differences between original, standardized and normalized image
 nsp_obj = nsp.Main()
@@ -307,3 +309,6 @@ nsp_obj = nsp.Main()
 # od.yolo_predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\extra testing photos'
 #                        '\\20210207_133453.jpg')
 
+# split files into train test val for finalized images
+# ctv_obj.Build('Finalized')  # executes only once/when required
+# end
