@@ -50,7 +50,7 @@ class Main:
         finalized_prod_sku_folder = f'{self.image_path}\\{self.finalized_prod_sku_folder}'
         if observation_test:  # generate 2 sample .tiff images to compare the output
             file = f'{finalized_prod_sku_folder}\\HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train\\A364.jpg'
-            print(f'Finalized A364.png file size is {os.stat(f"{file}").st_size / 1024} KB')
+            print(f'Finalized A364.jpg file size is {os.stat(f"{file}").st_size / 1024} KB')
 
             img = Image.open(file)
             img2 = np.asarray(img)

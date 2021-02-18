@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dbConnection>
+    <Server>
+        <value>localhost:27017</value>
+    </Server>
+    <Database>
+        <value>dscp_prod</value>
+    </Database>
+</dbConnection>
