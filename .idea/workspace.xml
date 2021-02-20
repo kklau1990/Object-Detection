@@ -26,17 +26,168 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="V2.0 - Remove redundant import">
+    <list default="true" id="7ebd1004-921b-4edf-8365-860ec96ac92c" name="Default Changelist" comment="V2.0 - Added custom filtered weights, connection to mongodb to retrieve product master details">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/NormStadProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/NormStadProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/od.py" beforeDir="false" afterPath="$PROJECT_DIR$/detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product_master.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/A364-norm_feature_scale_file size.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/A364-norm_feature_scale_file size.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/A364_feature_scale_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/A364_feature_scale_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/norm_A364.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/norm_A364.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/norm_A364.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/norm_A364.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/norm_feature_scale_A364.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/norm_feature_scale_A364.tiff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/norm_feature_scale_base_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/norm_feature_scale_base_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataPreprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T100.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T100.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T101.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T101.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T102.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T102.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T103.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T103.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T104.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T104.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T105.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T105.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T106.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T106.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T107.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T107.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T109.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T112.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T113.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T114.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T117.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T118.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T12.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T120.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T120.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T121.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T121.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T124.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T124.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T126.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T126.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T127.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T127.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T128.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T128.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T129.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T129.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T130.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T130.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T131.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T131.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T132.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T132.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T133.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T133.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T134.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T134.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T135.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T135.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T138.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T138.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T140.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T140.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T142.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T142.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T144.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T146.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T147.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T148.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T149.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T15.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T150.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T152.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T154.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T155.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T155.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T156.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T156.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T157.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T157.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T16.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T160.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T160.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T162.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T162.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T163.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T163.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T164.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T164.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T166.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T166.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T168.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T168.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T169.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T169.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T170.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T170.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T171.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T171.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T172.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T172.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T173.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T173.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T174.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T174.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T176.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T176.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T177.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T177.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T181.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T183.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T185.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T186.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T20.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T21.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T22.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T22.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T23.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T23.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T24.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T24.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T25.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T26.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T26.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T27.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T27.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T29.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T29.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T44.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T44.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T45.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T45.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T46.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T46.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T47.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T47.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T56.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T56.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T59.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T59.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T60.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T60.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T62.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T62.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T63.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T63.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T65.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T65.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T66.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T66.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T67.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T67.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T68.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T68.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T69.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T69.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T70.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T70.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T71.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T71.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T73.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T73.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T75.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T75.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T76.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T76.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T77.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T77.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T80.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T81.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T82.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T84.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T85.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T88.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T88.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T89.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T89.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T91.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T91.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T93.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T93.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T94.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T94.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T95.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T95.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T96.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T96.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T99.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/T99.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V108.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V110.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V110.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V136.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V137.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V139.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V141.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V143.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V143.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V145.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V145.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V175.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V178.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V180.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V182.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V182.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V184.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V184.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V187.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V33.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V33.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V34.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V34.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V35.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V35.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V50.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V50.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V51.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V57.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V72.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V78.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V79.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V79.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V83.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V83.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V90.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/V98.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/train.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/valid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/valid.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/yolo-obj.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Base/yolo-obj.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/Annotated Images - Finalized/yolo-obj.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/Annotated Images - Finalized/yolo-obj.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/NATURAL PURE OLIVE OIL 750 ML/test/TT115.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/NATURAL PURE OLIVE OIL 750 ML/test/TT115.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product SKU/NATURAL PURE OLIVE OIL 750 ML/val/V143.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Product SKU/NATURAL PURE OLIVE OIL 750 ML/val/V143.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/AnnotationVerification.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/AnnotationVerification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/detector.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613553318275</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="V2.0 - Added custom filtered weights, connection to mongodb to retrieve product master details">
+      <created>1613670663291</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1613670663291</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -306,17 +464,18 @@
     <MESSAGE value="V1.7 - Added filtered finalized images" />
     <MESSAGE value="V1.8 - Rename util files, refreshed finalized images" />
     <MESSAGE value="V1.9 - Remove redundant import" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.9 - Remove redundant import" />
+    <MESSAGE value="V2.0 - Added custom filtered weights, connection to mongodb to retrieve product master details" />
+    <option name="LAST_COMMIT_MESSAGE" value="V2.0 - Added custom filtered weights, connection to mongodb to retrieve product master details" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1612621562082">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612621562082" />
-    <state x="378" y="0" width="830" height="824" key="CommitChangelistDialog2" timestamp="1613670276465">
+    <state x="378" y="0" width="830" height="824" key="CommitChangelistDialog2" timestamp="1613718093612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="378" y="0" width="830" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613670276465" />
+    <state x="378" y="0" width="830" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613718093612" />
     <state x="217" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1612577795374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -329,18 +488,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="49" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613550274304" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1612599654498">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1613719288568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612599654498" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613719288568" />
     <state x="536" y="12" key="VCS.ChangeListViewerDialog" timestamp="1612577626346">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="536" y="12" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1612577626346" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1613553319961">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1613670680778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613553319961" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613670680778" />
     <state width="776" height="420" key="XDebugger.FullValuePopup" timestamp="1613540715163">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

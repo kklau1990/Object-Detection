@@ -26,6 +26,5 @@ F:\APU\Modules\CP\CP2\darknet\build\darknet\x64\data\obj\V181.jpg
 F:\APU\Modules\CP\CP2\darknet\build\darknet\x64\data\obj\V182.jpg
 F:\APU\Modules\CP\CP2\darknet\build\darknet\x64\data\obj\V183.jpg
 F:\APU\Modules\CP\CP2\darknet\build\darknet\x64\data\obj\V184.jpg
-F:\APU\Modules\CP\CP2\darknet\build\darknet\x64\data\obj\V186.jpg
 F:\APU\Modules\CP\CP2\darknet\build\darknet\x64\data\obj\V185.jpg
-
+F:\APU\Modules\CP\CP2\darknet\build\darknet\x64\data\obj\V186.jpg

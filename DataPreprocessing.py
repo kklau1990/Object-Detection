@@ -172,12 +172,12 @@ class Main:
             ifp_obj.initiate(i, batch, test_input)
     # end
 
-# rename original files
+# rename original files, enable when necessary
 nf_obj = nf
 # nf.main()  # executed once only
 # end
 
-# split files into train test val for base images
+# split files into train test val for base images, enable when necessary
 ctv_obj = ctv.Main()
 # ctv_obj.Build('Base')  # executes only once/when required
 # end
@@ -186,41 +186,45 @@ dp = Main()  # initialization
 # to visualize sampled data distribution
 dp.data_aggregation('Product SKU')
 dp.data_dist_vis(df['Folder'], 'Total Count', 'Product SKU', 'Product SKU Data Distribution', 'barh', '1')
-# dp.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Image Dimension Data Distribution', 'bar', 0)
-# dp.img_vis()
+dp.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Image Dimension Data Distribution', 'bar', 0)
+dp.img_vis()
 
+# synthesize data, enable when necessary
 # dp.data_augmentation()
 
 # to visualize augmented data distribution
-# dp.data_aggregation('Augmented Images')
-# dp.data_dist_vis(df['Folder'], 'Total Count', 'Product SKU', 'Product SKU Augmented Data Distribution', 'barh', '1')
-# dp.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Augmented Image Dimension Data Distribution',
-#                  'bar', 0)
+dp.data_aggregation('Augmented Images')
+dp.data_dist_vis(df['Folder'], 'Total Count', 'Product SKU', 'Product SKU Augmented Data Distribution', 'barh', '1')
+dp.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Augmented Image Dimension Data Distribution',
+                 'bar', 0)
 
 # to visualize finalized data distribution
-# dp.data_aggregation('Finalized Images')
-# dp.data_dist_vis(df['Folder'], 'Total Count', 'Product SKU', 'Product SKU Finalized Data Distribution', 'barh', '1')
-# dp.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Finalized Image Dimension Data Distribution',
-#                  'bar', 0)
+dp.data_aggregation('Finalized Images')
+dp.data_dist_vis(df['Folder'], 'Total Count', 'Product SKU', 'Product SKU Finalized Data Distribution', 'barh', '1')
+dp.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Finalized Image Dimension Data Distribution',
+                 'bar', 0)
 
-# resize finalized images
+# resize finalized images, enable when necessary
 # dp.img_resize()
 
-# dp.data_aggregation('Finalized Images', True)
-# dp.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Finalized Image Dimension Data Distribution '
-#                                                                      'Exclude Test Data', 'bar', 0)
+# visualize total finalized training and validation data
+dp.data_aggregation('Finalized Images', True)
+dp.data_dist_vis(df['Dimension'], 'Image Dimension', 'Total Count', 'Finalized Image Dimension Data Distribution '
+                                                                     'Exclude Test Data', 'bar', 0)
 
 # to visualize differences between original, standardized and normalized image
 nsp_obj = nsp.Main()
-# nsp_obj.standardization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
-# nsp_obj.normalization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
+nsp_obj.standardization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
+nsp_obj.normalization_plot('HUGGIES ULTRA SUPER JUMBO M\\unfiltered\\train', 'A364.jpg')
+# begin normalization process, enable when necessary
 # nsp_obj.normalization(observation_test=False)
 
+# copy a set of finalized unfiltered data to bilateral, mean, and median filtered folder, enable when necessary
 # dp.copy()
 
-# initiate filter processes
+# initiate filter processes, enable when necessary
 # dp.img_filter(filter_mode=[0, 1, 2], batch=True)
 
-# split files into train test val for finalized images
+# split files into train test val for finalized images, enable when necessary
 # ctv_obj.Build('Finalized')  # executes only once/when required
 # end

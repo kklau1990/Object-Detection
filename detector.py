@@ -6,10 +6,17 @@ import ProductSKU as psku
 import json
 import argparse
 from Database import Connection as DB
+from datetime import datetime
+
+log_path = psku.Main().cwd + '\\predicted output\\log'
+output_image_path = psku.Main().cwd + '\\predicted output\\images'
 
 
 # test yolo model
 def predict_output(test_input):
+    d1 = datetime.today().strftime('%Y%m%d')
+    dt = datetime.today().strftime('%Y-%m-%d_%H:%M:%S:%f')
+
     print("Connecting to MongoDB......Please wait.......")
     collection = DB.db_obj['product_master']
     if collection:
@@ -110,15 +117,26 @@ def predict_output(test_input):
                 predicted_objects += ', '
 
             predicted_objects += '{' + '"Product" : "{0}", "Quantity" : "{1}", "Per Unit Price" : "{6}{2}", ' \
-                                 '"Total Price" : "{6}{3}" , "Manufacturer" : "{4}", "Expiry Date" : "{5}"'.format(
+                                 '"Total Price" : "{6}{3}", "Manufacturer" : "{4}", "Expiry Date" : "{5}"'.format(
                                   key, unit_count, price, total_price, manufacturer, expiry_date, currency) + '}'
 
     print(predicted_objects)
+
+    # write to output folder
+    cv2.imwrite(f'{output_image_path}\\{dt.replace(":", "").replace("-", "")}.jpg', img)
+    # end
+
+    # write to a log file
+    f = open(f'{log_path}\\{d1.replace("_", "")}.txt', 'a')
+    f.write('{0}: test input argument: {1} | predicted objects json: {2}'.format(dt.replace('_', ' '), test_input,
+                                                                                 predicted_objects))
+    f.write('\n')
+    f.close()
+    # end
+
     plt.figure()
     plt.imshow(img[..., ::-1])  # RGB-> BGR
     plt.show()
-    return json.dumps(predicted_objects)  # return json string as api get result, but api not implemented yet...
-
 
 # unit test cases
 # predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\NATURAL PURE OLIVE OIL 750 ML'
@@ -132,6 +150,7 @@ def predict_output(test_input):
 # predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\extra testing photos'
 #                        '\\kleenex.jpg')
 # end
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--testdata', '-t', help='test data path')
