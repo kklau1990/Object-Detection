@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 import random
+import os
+import matplotlib.pyplot as plt
 
 
 class Main:
@@ -74,12 +76,16 @@ class Main:
 # unit test case
 # prod_sku_root_folder = 'Product SKU'
 # prod_sku_folders = ['HEAD & SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL', 'HUGGIES ULTRA SUPER JUMBO M',
-#                     'HUP SENG CREAM CRACKERS 225G', 'KLEENEX ULTRA SOFT BATH ISSUE MEGA',
+#                     'HUP SENG CREAM CRACKERS 428G', 'KLEENEX ULTRA SOFT BATH ISSUE MEGA',
 #                     'NATURAL PURE OLIVE OIL 750 ML',
 #                     'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH']
 # augmented_prod_sku_folder = 'Augmented Images'
 # cwd = os.getcwd()
 # image_path = f'{cwd}\\{prod_sku_root_folder}'
 #
-# x = main()
+# x = Main()
+# y = x.zoom(f'{image_path}\\{prod_sku_folders[1]}\\train', 'T45.jpg')
+# plt.figure()
+# plt.imshow(y)
+# plt.show()
 # y = x.translation(f'{image_path}\\{prod_sku_folders[0]}\\train', 'T3.jpg')
