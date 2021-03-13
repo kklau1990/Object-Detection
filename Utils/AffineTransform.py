@@ -77,7 +77,7 @@ class Main:
 prod_sku_root_folder = 'Product SKU'
 prod_sku_folders = ['HEAD & SHOULDERS SHAMPOO (ASSORTED) COOL MENTHOL', 'HUGGIES ULTRA SUPER JUMBO M',
                     'HUP SENG CREAM CRACKERS 428G', 'KLEENEX ULTRA SOFT BATH TISSUE MEGA',
-                    'NATURAL PURE OLIVE OIL 750 ML',
+                    'NATUREL PURE OLIVE OIL 750 ML',
                     'SUNSLIK SHAMPOO (ASSORTED) LIVELY CLEAN & FRESH']
 augmented_prod_sku_folder = 'Augmented Images'
 cwd = os.getcwd()

@@ -3,7 +3,6 @@ from flask import request
 import cv2
 import numpy as np
 import os
-import json
 import sys
 from datetime import datetime
 sys.path.insert(0, 'F:/APU/Modules/CP/CP2/Object Detection')

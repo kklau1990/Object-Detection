@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import ProductSKU as psku
-import json
 import argparse
 from Database import Connection as DB
 from datetime import datetime
@@ -97,7 +96,7 @@ def predict_output(test_input):
                 predicted_objects_count[label] = 1
             else:
                 predicted_objects_count[label] = predicted_objects_count[label] + 1
-            print(str(conf))
+            print(label + ':' + str(conf))
             cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
             cv2.putText(img, f'{label}: {str(conf)}', (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
                         # font size, color, thickness
@@ -139,7 +138,7 @@ def predict_output(test_input):
     plt.show()
 
 # unit test cases
-# predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\NATURAL PURE OLIVE OIL 750 ML'
+# predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\NATUREL PURE OLIVE OIL 750 ML'
 #                    '\\test\\TT116.jpg')
 # predict_output('F:\\APU\Modules\\CP\\CP2\\Object Detection\\Product SKU\\Finalized Images\\KLEENEX ULTRA SOFT BATH '
 #                'ISSUE MEGA\\unfiltered\\test\\A607.jpg')
