@@ -35,7 +35,7 @@ def predict_output():
 
         print("Initializing YoloV3......Please wait.......")
         # weights = 'base weights'
-        weights = 'custom weights\\data augmented\\bilateral filtered\\'
+        weights = 'custom weights\\data augmented\\median filtered\\'
         net = cv2.dnn.readNet(f'{os.getcwd()}\\{weights}\\yolo-obj_best.weights',
                               'F:\\APU\\Modules\\CP\\CP2\\darknet\\build\\darknet\\x64\\cfg\\yolo-obj.cfg')
 
@@ -60,7 +60,7 @@ def predict_output():
         height, width, channels = img.shape
 
         # USing blob function of opencv to preprocess image
-        blob = cv2.dnn.blobFromImage(img, 1 / 255.0, (384, 384),
+        blob = cv2.dnn.blobFromImage(img, 1 / 255.0, (256, 256),
                                      swapRB=True, crop=False)
         # Detecting objects
         net.setInput(blob)
@@ -140,7 +140,7 @@ def predict_output():
         f.close()
         # end
 
-        return json.dumps(predicted_objects)  # return json string as api get result
+        return predicted_objects  # return json string as api get result
     else:
         return 'Process fail. No argument is supplied.'
 

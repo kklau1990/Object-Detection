@@ -27,7 +27,7 @@ def predict_output(test_input):
 
     print("Initializing YoloV3......Please wait.......")
     # weights = 'base weights'
-    weights = 'custom weights\\data augmented\\bilateral filtered\\'
+    weights = 'custom weights\\data augmented\\median filtered\\'
     net = cv2.dnn.readNet(f'{os.getcwd()}\\{weights}\\yolo-obj_best.weights',
                           'F:\\APU\\Modules\\CP\\CP2\\darknet\\build\\darknet\\x64\\cfg\\yolo-obj.cfg')
 
@@ -52,7 +52,7 @@ def predict_output(test_input):
     height, width, channels = img.shape
 
     # USing blob function of opencv to preprocess image
-    blob = cv2.dnn.blobFromImage(img, 1 / 255.0, (384, 384),
+    blob = cv2.dnn.blobFromImage(img, 1 / 255.0, (256, 256),
                                  swapRB=True, crop=False)
     # Detecting objects
     net.setInput(blob)
@@ -97,7 +97,7 @@ def predict_output(test_input):
                 predicted_objects_count[label] = 1
             else:
                 predicted_objects_count[label] = predicted_objects_count[label] + 1
-
+            print(str(conf))
             cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
             cv2.putText(img, f'{label}: {str(conf)}', (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
                         # font size, color, thickness
