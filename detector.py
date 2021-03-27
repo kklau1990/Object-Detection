@@ -15,6 +15,7 @@ output_image_path = psku.Main().cwd + '\\predicted output\\images'
 def predict_output(test_input):
     d1 = datetime.today().strftime('%Y%m%d')
     dt = datetime.today().strftime('%Y-%m-%d_%H:%M:%S:%f')
+    conf_list = {}
 
     print("Connecting to MongoDB......Please wait.......")
     collection = DB.db_obj['product_master']
@@ -94,13 +95,19 @@ def predict_output(test_input):
 
             if label not in predicted_objects_count:
                 predicted_objects_count[label] = 1
+                conf_list[label] = [conf]
             else:
                 predicted_objects_count[label] = predicted_objects_count[label] + 1
-            print(label + ':' + str(conf))
+                c = conf_list.get(label)
+                c.append(conf)
+                conf_list[label] = c
+
             cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
             cv2.putText(img, f'{label}: {str(conf)}', (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
                         # font size, color, thickness
                         0.5, (255, 0, 0), 2)
+
+            print(label, conf, x, y, x+w, y+h)
 
     for key in predicted_objects_count.keys():
         doc = list(collection.find({'Product SKU': key}))
@@ -111,13 +118,17 @@ def predict_output(test_input):
             manufacturer = doc[0].get('Manufacturer')
             expiry_date = doc[0].get('Expiry Date')
             total_price = round(price * unit_count, 2)
+            conf_arr = conf_list.get(key)
+            conf_arr.sort()
 
             if predicted_objects:
                 predicted_objects += ', '
 
             predicted_objects += '{' + '"Product" : "{0}", "Quantity" : "{1}", "Per Unit Price" : "{6}{2}", ' \
-                                 '"Total Price" : "{6}{3}", "Manufacturer" : "{4}", "Expiry Date" : "{5}"'.format(
-                                  key, unit_count, price, total_price, manufacturer, expiry_date, currency) + '}'
+                                 '"Total Price" : "{6}{3}", "Manufacturer" : "{4}", "Expiry Date" : "{5}", ' \
+                                 '"Lowest Confidence" : "{7}", "Highest Confidence" : "{8}"'.format(
+                                  key, unit_count, price, total_price, manufacturer, expiry_date, currency,
+                                  conf_arr[0], conf_arr[-1]) + '}'
 
     print(predicted_objects)
 
